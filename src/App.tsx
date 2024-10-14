@@ -3,6 +3,7 @@ import Main from "./components/Main.tsx";
 import {v1} from "uuid";
 import {useState} from "react";
 import AddTodo from "./components/AddTodo.tsx";
+import DeleteTodo from "./components/DeleteTodo.tsx";
 
 type TypeArr = {
     id: string,
@@ -21,6 +22,7 @@ function App() {
     <>
         <AddTodo/>
         <Main arr={arr} setArr={setArr}/>
+        <DeleteTodo/>
     </>
   )
 }

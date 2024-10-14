@@ -20,7 +20,7 @@ function App() {
   return (
     <>
         <AddTodo/>
-        <Main/>
+        <Main arr={arr} setArr={setArr}/>
     </>
   )
 }

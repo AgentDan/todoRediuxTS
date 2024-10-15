@@ -5,7 +5,7 @@ import {useState} from "react";
 import AddTodo from "./components/AddTodo.tsx";
 import DeleteTodo from "./components/DeleteTodo.tsx";
 
-type TypeArr = {
+export type TypeArr = {
     id: string,
     todo: string,
     check: boolean

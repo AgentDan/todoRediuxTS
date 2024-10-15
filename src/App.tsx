@@ -5,13 +5,13 @@ import {useState} from "react";
 import AddTodo from "./components/AddTodo.tsx";
 
 export type TypeArr = {
-    id: string,
+    id?: string,
     todo: string,
     check: boolean
 }
 
 function App() {
-    const [arr] = useState <TypeArr>({
+    const [arr, setArr] = useState <TypeArr>({
         id: v1(),
         todo: "My first todo",
         check: false
@@ -20,7 +20,7 @@ function App() {
   return (
     <>
         <AddTodo/>
-        <Main arr={arr}/>
+        <Main arr={arr} setArr={setArr}/>
     </>
   )
 }

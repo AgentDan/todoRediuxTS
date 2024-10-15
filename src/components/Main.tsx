@@ -11,6 +11,11 @@ const Main: FC<PropsMain> = ({arr, setArr}) => {
         setArr({...arr, todo: e.currentTarget.value})
     }
 
+    const onChangeChecked = (e: ChangeEvent<HTMLInputElement>) => {
+        console.log("Checked : ", e.currentTarget.checked)
+        setArr({...arr, check: !arr.check})
+    }
+
     const onClickEnter = () => {
         console.log(arr.todo)
     }
@@ -28,17 +33,18 @@ const Main: FC<PropsMain> = ({arr, setArr}) => {
                     <input
                         type="checkbox"
                         checked={arr.check}
-                        onClick={()=> setArr({...arr, check: !arr.check})}
+                        onChange={onChangeChecked}
                     />
                 </div>
                 <div>
                     <button
-                      onClick={onClickEnter}
-                    >PRESS MY</button>
+                        onClick={onClickEnter}
+                    >PRESS MY
+                    </button>
                 </div>
             </div>
         </div>
-);
+    );
 };
 
 export default Main;
